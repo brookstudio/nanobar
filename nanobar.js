@@ -43,6 +43,12 @@
 
     // animation loop
     function move () {
+      if (el.previousSibling) {
+        // console.log(el.previousSibling.style.width);
+        // force hide the previous loading bar
+        el.previousSibling.style.height = 0;
+      }
+
       var dist = width - here
 
       if (dist < 0.1 && dist > -0.1) {
